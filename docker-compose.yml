@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  file-sharing-utility:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: file-sharing-utility
+    ports:
+      - "8080:8080"  # HTTP server
+      - "1080:1080"  # SOCKS5 proxy
+    environment:
+      - XOR_KEY=your_secret_key # Set your XOR key here
+      - LISTEN_ADDR=0.0.0.0:8080
+      - SOCKS_ADDR=0.0.0.0:1080
+    volumes:
+      - ./data/downloads:/app/downloads
+      - ./data/uploads:/app/uploads
+    restart: unless-stopped 
