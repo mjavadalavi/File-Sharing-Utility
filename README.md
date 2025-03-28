@@ -42,8 +42,8 @@ A Go-based file sharing utility with HTTP server and SOCKS5 proxy capabilities.
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/file-sharing-utility.git
-cd file-sharing-utility
+git clone https://github.com/mjavadalavi/FilePhantom.git
+cd FilePhantom
 
 # Install dependencies
 go mod tidy
@@ -56,7 +56,7 @@ go mod tidy
 make build
 
 # Or using go command
-go build -o bin/file-sharing-utility ./cmd/server
+go build -o bin/FilePhantom ./cmd/server
 ```
 
 ### Running
@@ -66,7 +66,7 @@ go build -o bin/file-sharing-utility ./cmd/server
 make run
 
 # Or run the binary directly
-./bin/file-sharing-utility -listen :8080 -socks :1080 -xor-key "secretkey"
+./bin/FilePhantom -listen :8080 -socks :1080 -xor-key "secretkey"
 ```
 
 ### Building for Multiple Platforms
@@ -80,7 +80,7 @@ make build-all
 ### Building the Image
 
 ```bash
-docker build -t file-sharing-utility .
+docker build -t FilePhantom .
 ```
 
 ### Running with Docker
@@ -89,7 +89,7 @@ docker build -t file-sharing-utility .
 docker run -p 8080:8080 -p 1080:1080 \
   -e XOR_KEY=your_secret_key \
   -v $(pwd)/data:/app/data \
-  file-sharing-utility
+  FilePhantom
 ```
 
 ### Running with Docker Compose
