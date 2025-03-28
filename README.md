@@ -20,16 +20,11 @@ A Go-based file sharing utility with HTTP server and SOCKS5 proxy capabilities.
 ├── api/              # API definitions and documentation (OpenAPI/Swagger)
 ├── cmd/              # Application entry points
 │   └── server/       # The main server application
-├── configs/          # Configuration files and templates
-├── docs/             # Project documentation
-├── internal/         # Private application code
-│   ├── common/       # Common utilities and shared code
-│   ├── httpserver/   # HTTP server implementation
-│   ├── socks/        # SOCKS5 proxy implementation
-│   └── xorrw/        # XOR reader/writer implementation
-└── pkg/              # Public libraries that can be used by external applications
-    ├── fileops/      # File operation utilities
-    └── yamux/        # Yamux session handling
+└── internal/         # Private application code
+    ├── common/       # Common utilities and shared code
+    ├── httpserver/   # HTTP server implementation
+    ├── socks/        # SOCKS5 proxy implementation
+    └── xorrw/        # XOR reader/writer implementation
 ```
 
 ## Requirements
